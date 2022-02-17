@@ -1,0 +1,6 @@
+<h1>Bookmarks#new</h1>
+<%= simple_form_for [@list, @bookmark], url: list_bookmarks_path do |f| %>
+  <%= f.input :movie, collection: Movie.all %>
+  <%= f.input :comment %>
+  <%= f.submit class: 'mt-2' %>
+<% end %>
