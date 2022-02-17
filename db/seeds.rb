@@ -10,12 +10,7 @@ require 'csv'
 Bookmark.destroy_all
 Movie.destroy_all
 List.destroy_all
-#
 
-
-# List.create(name: "Crime")
-# List.create(name: "Drama")
-# movies = []
 lists = {}
 CSV.foreach('db/movie_data.csv') do |movie|
   next if movie[0].nil?

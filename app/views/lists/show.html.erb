@@ -3,7 +3,7 @@
 <%= link_to "+ add a movie", new_list_bookmark_path(@list) %>
 
 <ul>
-  <% @list.movies.each do |movie| %>
-    <li><%= movie.title %></li>
+  <% @list.movies.each_with_index do |movie, ind| %>
+    <li><%= movie.title %> <%= link_to "X", bookmark_path(@list.bookmarks[ind]), method: :delete %></li>
   <% end %>
 </ul>
