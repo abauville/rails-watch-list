@@ -1,5 +1,5 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-<%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : image_path('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png'))"> %> %>
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : @list.movies.order(rating: :desc).first.poster_url%>">
   <div class="container">
     <h1><%= @list.name %></h1>
     <div class="banner-btn"><%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-primary" %></div>
