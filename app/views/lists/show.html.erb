@@ -1,6 +1,7 @@
 <h1><%= @list.name %></h1>
 
 <%= link_to "+ add a movie", new_list_bookmark_path(@list) %>
+<%= render "banner" %>
 
 <div class="cards">
   <% @list.movies.each_with_index do |movie, ind| %>
