@@ -51,5 +51,6 @@ gem 'rails-controller-testing', group: [ :test ]
 
 # Added by Arthur
 gem "autoprefixer-rails", "10.2.5"
+gem 'dotenv-rails', groups: [:development, :test]
 gem "font-awesome-sass", "~> 5.15"
 gem "simple_form"
