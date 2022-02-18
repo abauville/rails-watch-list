@@ -2,8 +2,8 @@
 
 <%= link_to "+ add a movie", new_list_bookmark_path(@list) %>
 
-<ul>
+<div class="cards">
   <% @list.movies.each_with_index do |movie, ind| %>
-    <li><%= movie.title %> <%= link_to "X", bookmark_path(@list.bookmarks[ind]), method: :delete %></li>
+    <%= render "card", movie: movie, ind: ind%>
   <% end %>
-</ul>
+</div>

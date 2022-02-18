@@ -1,0 +1,7 @@
+<h1>Movies#index</h1>
+
+<div class="cards">
+  <% @movies.each do |movie| %>
+  <%= render "card", movie: movie, display_delete_btn: false %>
+  <% end %>
+</div>
