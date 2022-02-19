@@ -1,8 +1,8 @@
 <%= render "banner" %>
 <div class="container mt-4">
   <div class="cards">
-    <% @list.movies.order(rating: :desc).each_with_index do |movie, ind| %>
-      <%= render "card", movie: movie, ind: ind%>
+    <% @list.movies.order(rating: :desc).each do |movie| %>
+      <%= render "card-movie", movie: movie %>
     <% end %>
   </div>
 </div>

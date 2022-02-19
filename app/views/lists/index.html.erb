@@ -1,7 +1,17 @@
 <h1>Lists</h1>
-<%= link_to "+ new list", new_list_path %>
-<ul>
+<div class="container mt-4">
   <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
+    <div class="list-container">
+      <div class="list-name">
+        <h2><%= list.name %></h2>
+        <p><%= "explore all" %> <i class="fas fa-angle-right"></i></p>
+        <%= link_to "", list_path(list) %>
+      </div>
+      <div class="cards-line">
+        <% list.movies.order(rating: :desc).limit(5).each do |movie| %>
+          <%= render "card-movie", movie: movie %>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
